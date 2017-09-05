@@ -377,8 +377,9 @@ module.exports = function(grunt) {
     includereplace: {
       html: {
         expand: true,
+        ext: '.html',
         cwd: 'demo/tpl',
-        src: ['*.html'],
+        src: ['*.tpl'],
         dest: 'demo/html'
       }
     },
