@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   overflow: hidden;
 }
 
@@ -11,7 +12,6 @@ a:focus {
   position: static;
   padding: 0;
 }
-
 
 
 /* navbar start */
@@ -59,7 +59,6 @@ a:focus {
 }
 
 
-
 /* navbar end */
 
 .main-container>.page-container {
@@ -102,6 +101,23 @@ a:focus {
   margin: 0;
   border: 0;
   position: relative;
+}
+
+.page-sidebar .sidebar-menu li:before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -4px;
+  width: 4px;
+  max-width: 4px;
+  overflow: hidden;
+  background-color: #00a53c;
+}
+
+.page-sidebar .sidebar-menu li.active:not(.open):before {
+  display: block;
 }
 
 .page-sidebar .sidebar-menu a {
@@ -236,7 +252,6 @@ a:focus {
   color: #262626;
 }
 
-
 .page-content {
   display: block;
   margin-left: 224px;
@@ -276,7 +291,6 @@ a:focus {
   position: relative;
   top: 2px;
 }
-
 
 .page-body {
   box-sizing: border-box;
@@ -344,5 +358,5 @@ a:focus {
 }
 
 .bs-example-form .input-group {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

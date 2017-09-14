@@ -1,5 +1,12 @@
 $(function() {
   (function InitiateSideMenu() {
+    $(".page-sidebar .sidebar-menu li a").each(function() {
+      if (location.href.indexOf($(this).attr("href")) !== -1) {
+        $(this).closest('li').addClass("active");
+        $(this).closest('ul').parents('li').addClass("open");
+      }
+    });
+
     $(".sidebar-toggler").on("click", function() {
       return $("#sidebar").toggleClass("hide"),
         $(".sidebar-toggler").toggleClass("active"), !1;
