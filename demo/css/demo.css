@@ -299,6 +299,29 @@ a:focus {
   overflow: auto;
 }
 
+.bs-example {
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0 -15px 15px;
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+  -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+}
+
+.bs-example:after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #959595;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  content: "实例：";
+}
+
 @media (min-width: 768px) {
   .bs-example {
     margin-right: 0;
@@ -312,29 +335,11 @@ a:focus {
   }
 }
 
-.bs-example {
-  position: relative;
-  padding: 45px 15px 15px;
-  margin: 0 -15px 15px;
-  border-color: #e5e5e5 #eee #eee;
-  border-style: solid;
-  border-width: 1px 0;
-  -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
-}
-
 @media (min-width: 768px) {
   .bs-example+.zero-clipboard .btn-clipboard {
     top: -16px;
     border-top-right-radius: 0;
   }
-}
-
-.bs-example+.highlight,
-.bs-example+.zero-clipboard+.highlight {
-  margin: -15px -15px 15px;
-  border-width: 0 0 1px;
-  border-radius: 0;
 }
 
 .highlight {
@@ -343,6 +348,13 @@ a:focus {
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
+}
+
+.bs-example+.highlight,
+.bs-example+.zero-clipboard+.highlight {
+  margin: -15px -15px 15px;
+  border-width: 0 0 1px;
+  border-radius: 0;
 }
 
 @media (min-width: 768px) {
@@ -359,4 +371,31 @@ a:focus {
 
 .bs-example-form .input-group {
   margin-bottom: 10px;
+}
+
+.bs-example-modal {
+    background-color: #f5f5f5;
+}
+
+.bs-example-modal .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+}
+
+.bs-example-popover {
+    padding-bottom: 24px;
+    background-color: #f9f9f9;
+}
+
+.bs-example-popover .popover {
+    position: relative;
+    display: block;
+    float: left;
+    width: 260px;
+    margin: 20px;
 }

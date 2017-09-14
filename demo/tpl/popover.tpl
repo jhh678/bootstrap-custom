@@ -87,11 +87,6 @@
             <h3 id="实例演示"><a class="anchorjs-link " href="#实例演示" aria-label="Anchor link for: 实例演示" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>实例演示</h3>
             <div class="bs-example bs-example-padded-bottom">
               <button type="button" class="btn btn-lg btn-danger bs-docs-popover" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Popover title" aria-describedby="popover133989">点我弹出/隐藏弹出框</button>
-              <div class="popover fade right in" role="tooltip" id="popover133989" style="top: 26px; left: 218.016px; display: block;">
-                <div class="arrow" style="top: 50%;"></div>
-                <h3 class="popover-title">Popover title</h3>
-                <div class="popover-content">And here's some amazing content. It's very engaging. Right?</div>
-              </div>
             </div>
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Popover title"</span> <span class="na">data-content=</span><span class="s">"And here's some amazing content. It's very engaging. Right?"</span><span class="nt">&gt;</span>点我弹出/隐藏弹出框<span class="nt">&lt;/button&gt;</span></code></pre></figure>
             <h4 id="4个弹出方向"><a class="anchorjs-link " href="#4个弹出方向" aria-label="Anchor link for: 4个弹出方向" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>4个弹出方向</h4>
@@ -311,6 +306,12 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
     </div>
   </div>
   @@include('common/footer.tpl')
+
+  <script>
+  	$(function () {
+      $('[data-toggle="popover"]').popover()
+    });
+  </script>
 </body>
 
 </html>

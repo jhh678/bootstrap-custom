@@ -38,7 +38,7 @@
                 <li role="presentation"><a href="#">Messages</a></li>
               </ul>
             </div>
-            <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -53,7 +53,7 @@
                 <li role="presentation"><a href="#">Messages</a></li>
               </ul>
             </div>
-            <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -67,7 +67,7 @@
                 <li role="presentation"><a href="#">Messages</a></li>
               </ul>
             </div>
-            <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills nav-stacked"</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
@@ -91,7 +91,7 @@
                 <li role="presentation"><a href="#">Messages</a></li>
               </ul>
             </div>
-            <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs nav-justified"</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/ul&gt;</span>
@@ -111,7 +111,7 @@
                 <li role="presentation" class="disabled"><a href="#">Disabled link</a></li>
               </ul>
             </div>
-            <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
   ...
   <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Disabled link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -138,7 +138,7 @@
                 </li>
               </ul>
             </div>
-            <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
   ...
   <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
@@ -171,7 +171,7 @@
               </ul>
             </div>
             <!-- /example -->
-            <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
   ...
   <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
