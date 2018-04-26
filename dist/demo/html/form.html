@@ -5,10 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="renderer" content="webkit">
   <title>bootstrap-custom Demo</title>
-  <base href="../">
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="../css/bootstrap-theme.css">
-  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/glyphicon.css"/>
+  <link rel="stylesheet" href="../css/demo.css">
 </head>
 
 
@@ -20,7 +19,7 @@
         <a href="#">Bootstarp个性化Demo</a>
       </div>
       <div class="pull-right">
-        <div class="dropdown">
+        <div class="dropdown dropdown-demo">
           <div class="dropdown-toggle" data-toggle="dropdown">张三
             <span class="caret"></span>
           </div>
@@ -49,6 +48,23 @@
         <i class="menu-icon glyphicon glyphicon-home"></i>
         <span class="menu-text">首页</span>
       </a>
+    </li>
+    <li>
+      <a href="#" class="menu-dropdown">
+      <i class="menu-icon glyphicon glyphicon-th"></i>
+      <span class="menu-text">布局排版</span>
+      <i class="menu-expand"></i></a>
+      <ul class="submenu" style="display: none;">
+        <li>
+          <a href="overview.html"><span class="menu-text">概览</span></a>
+        </li>
+        <li>
+          <a href="grid.html"><span class="menu-text">栅格系统</span></a>
+        </li>
+        <li>
+          <a href="layout.html"><span class="menu-text">排版</span></a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="#" class="menu-dropdown">
@@ -83,7 +99,7 @@
     </li>
     <li>
       <a href="#" class="menu-dropdown">
-      <i class="menu-icon glyphicon glyphicon-th"></i>
+      <i class="menu-icon glyphicon glyphicon-tasks"></i>
       <span class="menu-text">基本组件</span>
       <i class="menu-expand"></i></a>
       <ul class="submenu" style="display: none;">
@@ -104,6 +120,12 @@
         </li>
         <li>
           <a href="navigation.html"><span class="menu-text">导航条</span></a>
+        </li>
+        <li>
+          <a href="breadcrumb.html"><span class="menu-text">面包屑导航</span></a>
+        </li>
+        <li>
+          <a href="pagination.html"><span class="menu-text">分页</span></a>
         </li>
         <li>
           <a href="progressbar.html"><span class="menu-text">进度条</span></a>
@@ -164,11 +186,11 @@
             <div class="bs-example" data-example-id="basic-forms">
               <form>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label class="require" for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label class="require" for="exampleInputPassword1">Password</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="form-group">
@@ -224,7 +246,7 @@
             <div class="bs-example" data-example-id="simple-form-inline">
               <form class="form-inline">
                 <div class="form-group">
-                  <label for="exampleInputName2">Name</label>
+                  <label class="require" for="exampleInputName2">Name</label>
                   <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
                 </div>
                 <div class="form-group">
@@ -309,24 +331,48 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Transfer cash<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
+            <div class="bs-example" data-example-id="form-inline-with-input-group">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                  <div class="input-group-inner">
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <div class="input-group-inner-addon">.00</div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Transfer cash</button>
+              </form>
+            </div>
+            <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"exampleInputAmount"</span><span class="nt">&gt;</span>Amount (in dollars)<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-inner"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputAmount"</span> <span class="na">placeholder=</span><span class="s">"Amount"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-inner-addon"</span><span class="nt">&gt;</span>.00<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Transfer cash<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
             <h2 id="forms-horizontal"><a class="anchorjs-link " href="#forms-horizontal" aria-label="Anchor link for: forms horizontal" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>水平排列的表单</h2>
             <p>通过为表单添加 <code>.form-horizontal</code> 类，并联合使用 Bootstrap 预置的栅格类，可以将 <code>label</code> 标签和控件组水平并排布局。这样做将改变 <code>.form-group</code> 的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加 <code>.row</code> 了。</p>
             <div class="bs-example" data-example-id="simple-horizontal-form">
               <form class="form-horizontal">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  <label for="inputEmail3" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-20">
+                    <input type="email" class="form-control success" id="inputEmail3" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                  <div class="col-sm-10">
+                  <label for="inputPassword3" class="col-sm-4 control-label">Password</label>
+                  <div class="col-sm-20">
                     <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
+                  <div class="col-sm-offset-4 col-sm-20">
                     <div class="checkbox">
                       <label>
                         <input type="checkbox"> Remember me
@@ -335,7 +381,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
+                  <div class="col-sm-offset-4 col-sm-20">
                     <button type="submit" class="btn btn-default">Sign in</button>
                   </div>
                 </div>
@@ -345,19 +391,19 @@
 
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-horizontal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputEmail3"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputEmail3"</span> <span class="na">class=</span><span class="s">"col-sm-4 control-label"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-20"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputEmail3"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword3"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword3"</span> <span class="na">class=</span><span class="s">"col-sm-4 control-label"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-20"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputPassword3"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-2 col-sm-10"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-4 col-sm-20"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;label&gt;</span>
           <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Remember me
@@ -366,11 +412,87 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-2 col-sm-10"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-4 col-sm-20"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
+            <h2 id="forms-horizontal"><a class="anchorjs-link " href="#forms-horizontal" aria-label="Anchor link for: forms horizontal" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>水平排列的表单-表单验证</h2>
+            <p>通过为表单添加 <code>.form-horizontal</code> 类，并联合使用 Bootstrap 预置的栅格类，可以将 <code>label</code> 标签和控件组水平并排布局。这样做将改变 <code>.form-group</code> 的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加 <code>.row</code> 了。</p>
+            <div class="bs-example" data-example-id="simple-horizontal-form">
+              <form class="form-horizontal">
+                <div class="form-group required has-success">
+                  <label for="inputEmail3" class="control-label" style="width: 100px;">Email</label>
+                  <div class="form-item" style="margin-left: 110px;">
+                    <input type="email" class="form-control success" id="inputEmail3" placeholder="Email">
+                    <i class="validation-icon glyphicon glyphicon-ok-sign"></i>
+                    <div class="validation-info">请输入正确的邮箱</div>
+                  </div>
+                </div>
+                <div class="form-group required has-error">
+                  <label for="inputPassword3" class="control-label" style="width: 100px;">Password</label>
+                  <div class="form-item" style="margin-left: 110px;">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <i class="validation-icon glyphicon glyphicon-exclamation-sign"></i>
+                    <div class="validation-info">请输入正确的密码</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-item" style="margin-left: 110px;">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Remember me
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-4 col-sm-20">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- /.bs-example -->
+
+            <figure class="highlight"><pre><code class="language-html" data-lang="html">&lt;form class=&quot;form-horizontal&quot;&gt;
+            &lt;div class=&quot;form-group has-success&quot;&gt;
+              &lt;label for=&quot;inputEmail3&quot; class=&quot;col-sm-4 require&quot;&gt;Email&lt;/label&gt;
+              &lt;div class=&quot;col-sm-20&quot;&gt;
+                &lt;div class=&quot;form-item&quot;&gt;
+                  &lt;input type=&quot;email&quot; class=&quot;form-control success&quot; id=&quot;inputEmail3&quot; placeholder=&quot;Email&quot;&gt;
+                  &lt;i class=&quot;validation-icon glyphicon glyphicon-ok-sign&quot;&gt;&lt;/i&gt;
+                  &lt;div class=&quot;validation-info&quot;&gt;请输入正确的邮箱&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group has-error&quot;&gt;
+              &lt;label for=&quot;inputPassword3&quot; class=&quot;col-sm-4 require&quot;&gt;Password&lt;/label&gt;
+              &lt;div class=&quot;col-sm-20&quot;&gt;
+                &lt;div class=&quot;form-item&quot;&gt;
+                  &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword3&quot; placeholder=&quot;Password&quot;&gt;
+                  &lt;i class=&quot;validation-icon glyphicon glyphicon-exclamation-sign&quot;&gt;&lt;/i&gt;
+                  &lt;div class=&quot;validation-info&quot;&gt;请输入正确的密码&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;div class=&quot;col-sm-offset-4 col-sm-20&quot;&gt;
+                &lt;div class=&quot;checkbox&quot;&gt;
+                  &lt;label&gt;
+                    &lt;input type=&quot;checkbox&quot;&gt; Remember me
+                  &lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;div class=&quot;col-sm-offset-4 col-sm-20&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Sign in&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;</code></pre></figure>
+
             <h2 id="forms-controls"><a class="anchorjs-link " href="#forms-controls" aria-label="Anchor link for: forms controls" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>被支持的控件</h2>
             <p>表单布局实例中展示了其所支持的标准表单控件。</p>
             <h3 id="输入框"><a class="anchorjs-link " href="#输入框" aria-label="Anchor link for: 输入框" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>输入框</h3>
@@ -591,14 +713,14 @@
             <div class="bs-example" data-example-id="horizontal-static-form-control">
               <form class="form-horizontal">
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Email</label>
-                  <div class="col-sm-10">
+                  <label class="col-sm-4">Email</label>
+                  <div class="col-sm-20">
                     <p class="form-control-static">email@example.com</p>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-                  <div class="col-sm-10">
+                  <label for="inputPassword" class="col-sm-4">Password</label>
+                  <div class="col-sm-20">
                     <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                   </div>
                 </div>
@@ -608,13 +730,13 @@
 
             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-horizontal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-control-static"</span><span class="nt">&gt;</span>email@example.com<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword"</span> <span class="na">class=</span><span class="s">"col-sm-2"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputPassword"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -756,9 +878,9 @@
       </div>
     </div>
   </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="../js/bootstrap.js"></script>
-  <script src="js/demo.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../../js/bootstrap.js"></script>
+  <script src="../js/demo.js"></script>
 
 </body>
 

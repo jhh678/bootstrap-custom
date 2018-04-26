@@ -5,13 +5,13 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
 
-  RegExp.quote = function(string) {
+  RegExp.quote = function (string) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
   };
 
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
   var path = require('path');
   var generateGlyphiconsData = require('./grunt/bs-glyphicons-data-generator.js');
   var BsLessdocParser = require('./grunt/bs-lessdoc-parser.js');
-  var getLessVarsData = function() {
+  var getLessVarsData = function () {
     var filePath = path.join(__dirname, 'less/variables.less');
     var fileContent = fs.readFileSync(filePath, {
       encoding: 'utf8'
@@ -35,8 +35,8 @@ module.exports = function(grunt) {
     encoding: 'utf8'
   });
 
-  Object.keys(configBridge.paths).forEach(function(key) {
-    configBridge.paths[key].forEach(function(val, i, arr) {
+  Object.keys(configBridge.paths).forEach(function (key) {
+    configBridge.paths[key].forEach(function (val, i, arr) {
       arr[i] = path.join('./docs/assets', val);
     });
   });
@@ -169,17 +169,6 @@ module.exports = function(grunt) {
         },
         src: 'less/bootstrap.less',
         dest: 'dist/css/<%= pkg.name %>.css'
-      },
-      compileTheme: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>-theme.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>-theme.css.map'
-        },
-        src: 'less/theme.less',
-        dest: 'dist/css/<%= pkg.name %>-theme.css'
       }
     },
 
@@ -284,11 +273,6 @@ module.exports = function(grunt) {
       demo: {
         expand: true,
         src: ['demo/**', '!demo/tpl/**'],
-        dest: 'dist/'
-      },
-      fonts: {
-        expand: true,
-        src: 'fonts/**',
         dest: 'dist/'
       },
       docs: {
@@ -486,10 +470,10 @@ module.exports = function(grunt) {
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
 
-  var runSubset = function(subset) {
+  var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
   };
-  var isUndefOrNonZero = function(val) {
+  var isUndefOrNonZero = function (val) {
     return val === undefined || val !== '0';
   };
 
@@ -523,30 +507,30 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
+  grunt.registerTask('less-compile', ['less:compileCore']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:demo', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:demo', 'dist-js']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
+  grunt.registerTask('default', ['clean:dist', 'test']);
 
-  grunt.registerTask('dev', ['copy:fonts', 'dist-css', 'dist-js', 'includereplace', 'browserSync', 'watch']);
+  grunt.registerTask('dev', ['dist-css', 'dist-js', 'includereplace', 'browserSync', 'watch']);
 
-  grunt.registerTask('build-glyphicons-data', function() {
+  grunt.registerTask('build-glyphicons-data', function () {
     generateGlyphiconsData.call(this, grunt);
   });
 
   // task for building customizer
   grunt.registerTask('build-customizer', ['build-customizer-html', 'build-raw-files']);
   grunt.registerTask('build-customizer-html', 'pug');
-  grunt.registerTask('build-raw-files', 'Add scripts/less files to customizer.', function() {
+  grunt.registerTask('build-raw-files', 'Add scripts/less files to customizer.', function () {
     var banner = grunt.template.process('<%= banner %>');
     generateRawFiles(grunt, banner);
   });
 
-  grunt.registerTask('commonjs', 'Generate CommonJS entrypoint module in dist dir.', function() {
+  grunt.registerTask('commonjs', 'Generate CommonJS entrypoint module in dist dir.', function () {
     var srcFiles = grunt.config.get('concat.bootstrap.src');
     var destFilepath = 'dist/js/npm.js';
     generateCommonJSModule(grunt, srcFiles, destFilepath);

@@ -1,6 +1,6 @@
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2018 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://localhost:3000/)
+ * Copyright 2011-2018 Jiang Haihua
  * Licensed under the MIT license
  */
 

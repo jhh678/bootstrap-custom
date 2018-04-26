@@ -2,8 +2,8 @@ $(function() {
   (function InitiateSideMenu() {
     $(".page-sidebar .sidebar-menu li a").each(function() {
       if (location.href.indexOf("/" + $(this).attr("href")) !== -1) {
-        $(this).closest('li').addClass("active");
-        $(this).closest('ul').parents('li').addClass("open");
+      	$(this).closest('li').addClass("active");
+      	$(this).closest('ul').parents('li').addClass("open");
       }
     });
 
@@ -41,5 +41,10 @@ $(function() {
 
   // 设置内容区域高度
   $('.page-body').outerHeight($(window).height() - $('.navbar').height() - $('.page-breadcrumbs').height());
+
+  $(window).on('resize', function() {
+    // 设置内容区域高度
+    $('.page-body').outerHeight($(window).height() - $('.navbar').height() - $('.page-breadcrumbs').height());
+  })
 
 });

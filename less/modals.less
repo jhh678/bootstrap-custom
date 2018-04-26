@@ -30,10 +30,22 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    .translate(0, -25%);
+    .translate(0, -10%);
+    &.modal-align-middle {
+      .translate(0, -110%);
+     }
     .transition-transform(~"0.3s ease-out");
   }
-  &.in .modal-dialog { .translate(0, 0) }
+  &.in .modal-dialog {
+     .translate(0, 0);
+     &.modal-align-middle {
+      .translate(0, -100%);
+     }
+  }
+
+  .modal-align-middle {
+    top: 50%;
+  }
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -53,8 +65,8 @@
   background-color: @modal-content-bg;
   border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid @modal-content-border-color;
-  border-radius: @border-radius-large;
-  .box-shadow(0 3px 9px rgba(0,0,0,.5));
+  border-radius: @border-radius-base;
+  .box-shadow(0 3px 9px rgba(0,0,0,.4));
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
@@ -77,38 +89,56 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: @modal-title-padding;
+  position: relative;
+  padding: @modal-title-padding-tb @modal-title-padding-lr;
   border-bottom: 1px solid @modal-header-border-color;
+  border-top-left-radius: @border-radius-base;
+  border-top-right-radius: @border-radius-base;
+  background: @modal-header-bg;
   &:extend(.clearfix all);
 }
 // Close icon
 .modal-header .close {
-  margin-top: -2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 @modal-title-padding-lr;
+  font-size: @font-size-base;
+  color: @gray-dark;
+  border-radius: 0;
+  border-top-right-radius: @border-radius-base;
+
+  .iconfont {
+    margin: 0;
+  }
 }
 
 // Title text within header
 .modal-title {
   margin: 0;
-  line-height: @modal-title-line-height;
+//line-height: @modal-title-line-height;
+  font-size: @font-size-base;
+  color: @gray-darker;
 }
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: @modal-inner-padding;
+  padding: @modal-inner-padding-tb @modal-inner-padding-lr;
 }
 
 // Footer (for actions)
 .modal-footer {
-  padding: @modal-inner-padding;
-  text-align: right; // right align buttons
-  border-top: 1px solid @modal-footer-border-color;
+  padding: 0 @modal-inner-padding-lr @modal-inner-padding-tb;
+  text-align: center; // center align buttons
+//border-top: 1px solid @modal-footer-border-color;
   &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
 
   // Properly space out buttons
   .btn + .btn {
-    margin-left: 5px;
+    margin-left: 20px;
     margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
   }
   // but override that for button groups
@@ -138,7 +168,7 @@
     margin: 30px auto;
   }
   .modal-content {
-    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+    .box-shadow(0 5px 15px rgba(0,0,0,.4));
   }
 
   // Modal sizes

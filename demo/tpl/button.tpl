@@ -49,6 +49,7 @@
             <h2 id="buttons-options"><a class="anchorjs-link " href="#buttons-options" aria-label="Anchor link for: buttons options" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>预定义样式</h2>
             <p>使用下面列出的类可以快速创建一个带有预定义样式的按钮。</p>
             <div class="bs-example" data-example-id="btn-variants">
+              <button type="button" class="btn">（初始样式）btn</button>
               <button type="button" class="btn btn-default">（默认样式）Default</button>
               <button type="button" class="btn btn-primary">（首选项）Primary</button>
               <button type="button" class="btn btn-success">（成功）Success</button>
@@ -58,7 +59,10 @@
               <button type="button" class="btn btn-link">（链接）Link</button>
             </div>
 
-            <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Standard button --&gt;</span>
+            <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- init button --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>（初始样式）btn<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Standard button --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>（默认样式）Default<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;</span>
@@ -83,7 +87,7 @@
               <p>为按钮添加不同的颜色只是一种视觉上的信息表达方式，但是，对于使用辅助技术 -- 例如屏幕阅读器 -- 的用户来说，颜色是不可见的。建议，确保通过颜色表达的信息或者通过内容自身表达出来（按钮上的文字），或者通过其他方式 -- 例如通过 <code>.sr-only</code> 类隐藏的额外文本 -- 表达出来。</p>
             </div>
             <h2 id="buttons-sizes"><a class="anchorjs-link " href="#buttons-sizes" aria-label="Anchor link for: buttons sizes" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>尺寸</h2>
-            <p>需要让按钮具有不同尺寸吗？使用 <code>.btn-lg</code>、<code>.btn-sm</code> 或 <code>.btn-xs</code> 就可以获得不同尺寸的按钮。</p>
+            <p>需要让按钮具有不同尺寸吗？使用 <code>.btn-lg</code>、<code>.btn-sm</code> 或 <code>.btn-xs</code> 就可以获得不同尺寸的按钮。使用<code>.btn-mw</code>设置固定最小宽度120px。</p>
             <div class="bs-example" data-example-id="btn-sizes">
               <p>
                 <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
@@ -94,12 +98,17 @@
                 <button type="button" class="btn btn-default">（默认尺寸）Default button</button>
               </p>
               <p>
-                <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
+                <button type="button" class="btn btn-primary btn-sm"><i class="iconfont glyphicon glyphicon-apple"></i>（小按钮）Small button</button>
                 <button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>
               </p>
               <p>
                 <button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
                 <button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary btn-mw">固宽</button>
+                <button type="button" class="btn btn-default btn-mw">固宽</button>
+                                设置最小固定宽度按钮(默认120px)
               </p>
             </div>
 
@@ -118,6 +127,10 @@
 <span class="nt">&lt;p&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xs"</span><span class="nt">&gt;</span>（超小尺寸）Extra small button<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-xs"</span><span class="nt">&gt;</span>（超小尺寸）Extra small button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-mw"</span><span class="nt">&gt;</span>固宽<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-mw"</span><span class="nt">&gt;</span>固宽<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span></code></pre></figure>
             <p>通过给按钮添加 <code>.btn-block</code> 类可以将其拉伸至父元素100%的宽度，而且按钮也变为了块级（block）元素。</p>
             <div class="bs-example" data-example-id="block-btns">

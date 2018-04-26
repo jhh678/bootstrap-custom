@@ -20,8 +20,6 @@ a:focus {
   padding: 0;
   margin: 0;
   border: none;
-  height: 45px;
-  min-height: 45px;
   z-index: 200;
 }
 
@@ -51,9 +49,12 @@ a:focus {
   color: #fff;
 }
 
-.navbar .dropdown .dropdown-toggle {
+.dropdown-demo {
   height: 45px;
   line-height: 45px;
+}
+
+.navbar .dropdown .dropdown-toggle {
   color: #fff;
   padding-right: 10px;
 }
@@ -299,6 +300,10 @@ a:focus {
   overflow: auto;
 }
 
+.bs-docs-section {
+  min-width: 996px;
+}
+
 .bs-example {
   position: relative;
   padding: 45px 15px 15px;
@@ -398,4 +403,17 @@ a:focus {
     float: left;
     width: 260px;
     margin: 20px;
+}
+
+.show-grid {
+    margin-bottom: 15px;
+}
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
 }

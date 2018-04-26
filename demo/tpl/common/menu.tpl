@@ -8,6 +8,23 @@
     </li>
     <li>
       <a href="#" class="menu-dropdown">
+      <i class="menu-icon glyphicon glyphicon-th"></i>
+      <span class="menu-text">布局排版</span>
+      <i class="menu-expand"></i></a>
+      <ul class="submenu" style="display: none;">
+        <li>
+          <a href="overview.html"><span class="menu-text">概览</span></a>
+        </li>
+        <li>
+          <a href="grid.html"><span class="menu-text">栅格系统</span></a>
+        </li>
+        <li>
+          <a href="layout.html"><span class="menu-text">排版</span></a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="menu-dropdown">
       <i class="menu-icon glyphicon glyphicon-leaf"></i>
       <span class="menu-text">基本样式</span>
       <i class="menu-expand"></i></a>
@@ -39,7 +56,7 @@
     </li>
     <li>
       <a href="#" class="menu-dropdown">
-      <i class="menu-icon glyphicon glyphicon-th"></i>
+      <i class="menu-icon glyphicon glyphicon-tasks"></i>
       <span class="menu-text">基本组件</span>
       <i class="menu-expand"></i></a>
       <ul class="submenu" style="display: none;">
@@ -60,6 +77,12 @@
         </li>
         <li>
           <a href="navigation.html"><span class="menu-text">导航条</span></a>
+        </li>
+        <li>
+          <a href="breadcrumb.html"><span class="menu-text">面包屑导航</span></a>
+        </li>
+        <li>
+          <a href="pagination.html"><span class="menu-text">分页</span></a>
         </li>
         <li>
           <a href="progressbar.html"><span class="menu-text">进度条</span></a>

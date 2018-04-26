@@ -20,6 +20,14 @@
 .dropup,
 .dropdown {
   position: relative;
+
+  .btn {
+    padding-left: @padding-base-horizontal;
+    padding-right: @padding-base-horizontal;
+    .iconfont {
+      margin: 0;
+    }
+  }
 }
 
 // Prevent the focus on the dropdown toggle when closing dropdowns
@@ -35,9 +43,9 @@
   z-index: @zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: 160px;
+  min-width: 120px;
   padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  margin: 4px 0; // override default ul
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -64,10 +72,11 @@
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: 3px 20px;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
     clear: both;
     font-weight: normal;
-    line-height: @line-height-base;
     color: @dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
   }
@@ -119,6 +128,12 @@
 
 // Open state for the dropdown
 .open {
+  .iconfont.icon-zhankai {
+    &:before {
+      display: inline-block;
+      transform: rotateZ(180deg);
+    }
+  }
   // Show the menu
   > .dropdown-menu {
     display: block;
@@ -193,7 +208,6 @@
   .dropdown-menu {
     top: auto;
     bottom: 100%;
-    margin-bottom: 2px;
   }
 }
 

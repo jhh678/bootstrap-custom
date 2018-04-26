@@ -5,7 +5,7 @@
         <a href="#">Bootstarp个性化Demo</a>
       </div>
       <div class="pull-right">
-        <div class="dropdown">
+        <div class="dropdown dropdown-demo">
           <div class="dropdown-toggle" data-toggle="dropdown">张三
             <span class="caret"></span>
           </div>
